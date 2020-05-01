@@ -7,9 +7,10 @@
 		<artifactId>movie-microservices</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>movie-catalog-service</artifactId>
-	<name>movie-catalog-service</name>
-	<description>Movie Catalog Service</description>
+	<artifactId>discovery-server</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>discovery-server</name>
+	<description>Discovery Server</description>
 
 	<properties>
 		<java.version>14</java.version>
@@ -17,23 +18,17 @@
 	</properties>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
 
-	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
 		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webflux</artifactId>
-		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -47,8 +42,6 @@
 		</dependency>
 	</dependencies>
 
-
-
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -60,8 +53,6 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
-
 
 	<build>
 		<plugins>
